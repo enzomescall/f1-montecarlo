@@ -1,0 +1,13 @@
+[project]
+name = "f1sim"
+version = "0.1.0"
+dependencies = ["numpy", "pyyaml"]
+
+[project.scripts]
+f1sim = "f1sim.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
