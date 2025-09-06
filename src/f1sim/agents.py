@@ -11,7 +11,7 @@ class Constructor:
     id: str
     points: float
     # Bayesian variables:
-    pitstop_time: Theta
+    pitstop_time: Theta # We can just add flat values for changing wings
 
 @dataclass
 class DriverCar:
@@ -54,8 +54,13 @@ class Tire:
     Calculate degredation at every tick
     """
     spec: TireSpec
-    deg: float = 0.0
+    deg: float = 0.0    # value between 0 - 1, where 1 are completely degraded tires
+
+    def d(self, l):
+        # Formula for degradation, l is the load on the tires 
+        self.deg += l * self.spec.deg_rate
     
+
 
 @dataclass
 class CarState:
