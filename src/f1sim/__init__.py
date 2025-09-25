@@ -8,4 +8,4 @@ from .track import Track
 from .agents import DriverCar, CarState, TireSpec
 
 __all__ = ["RaceSim", "Track", "DriverCar", "CarState", "TireSpec"]
-__version__ = "0.0.1"
+__version__ = "0.0.1    "
